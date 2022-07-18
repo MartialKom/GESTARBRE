@@ -36,7 +36,6 @@ dependencies {
     implementation files('libs/mysql-connector-java-5.1.49-bin.jar')
     implementation 'androidx.cardview:cardview:1.0.0'
 }
-
 /*
 configurations.all {
     resolutionStrategy {

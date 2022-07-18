@@ -1,13 +1,13 @@
 package cm.pfe.gestarbre;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.view.LayoutInflater;
+        import android.app.Activity;
+        import android.app.AlertDialog;
+        import android.view.LayoutInflater;
 
 class LoadingDialog {
 
     private Activity activity;
-   private AlertDialog alertDialog;
+    private AlertDialog alertDialog;
 
     public LoadingDialog(Activity activity) {
         this.activity = activity;

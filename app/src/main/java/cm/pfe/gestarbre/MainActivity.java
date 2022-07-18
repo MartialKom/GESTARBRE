@@ -33,17 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* Connexion à la base de données*/
-
-        if(DbConnection.connexion==null) {
-            String error = DbConnection.connecter();
-
-            /* Message en cas d'erreur*/
-            if (!error.equalsIgnoreCase("OK")) {
-                Toast.makeText(this, "erreur: " + error, Toast.LENGTH_LONG).show();
-
-            }
-        }
        /* Je récupère les valeurs des élements de la page de connexion*/
        username = (TextView) findViewById(R.id.username);
        pass = (TextView) findViewById(R.id.password);
@@ -55,18 +44,16 @@ public class MainActivity extends AppCompatActivity {
          public void onClick(View v) {
              String log = username.getText().toString();
              String mdp = pass.getText().toString();
-            // Utilisateur u = new Utilisateur(log,mdp);
-             //r = u.connection(DbConnection.connexion);
 
-             if(log.equals(mdp)){
-             Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-             startActivity(intent);
-             } else {
+
+
+
+             /*
                  android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
                  builder.setTitle("Attention");
                  builder.setMessage("Mauvaise Authentification...");
                  builder.create().show();
-             }
+             */
          }
      });
 
